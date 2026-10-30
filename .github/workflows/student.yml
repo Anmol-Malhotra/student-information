@@ -1,24 +1,24 @@
 name: Student Information Pipeline
 
 on:
-push:
-branches:
-- main
+  push:
+    branches:
+      - main
 
 jobs:
-student-info:
-runs-on: ubuntu-latest
+  student-info:
+    runs-on: ubuntu-latest
 
-steps:
-  - name: Checkout Repository
-    uses: actions/checkout@v4
 
-  - name: Display Start Message
-    run: echo "Student Information Pipeline Started"
-
-  - name: Display Student Information
-    run: cat student.txt
-
-  - name: Display Completion Message
-    run: echo "Pipeline Execution Completed"
-```
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+    
+      - name: Display Start Message
+        run: echo "Student Information Pipeline Started"
+    
+      - name: Display Student Information
+        run: cat student.txt
+    
+      - name: Display Completion Message
+        run: echo "Pipeline Execution Completed"
